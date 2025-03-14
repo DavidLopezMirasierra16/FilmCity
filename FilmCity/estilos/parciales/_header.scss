@@ -1,0 +1,231 @@
+/* Estilos base - Móviles (Mobile First) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: black !important;
+    font-family: $fuente_principal !important;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: $color_secundario;
+    width: 100%;
+    margin: auto;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    .desplegable {
+        display: block;
+        font-size: 35px;
+        color: white;
+        margin-left: -100px;
+        margin-top: 13px;
+        cursor: pointer;
+    }
+
+    .perfil {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-right: 13px;
+        margin-top: 5px;
+        
+        .user {
+            width: 35px;
+            height: 36px;
+            border-radius: 40px;
+        }
+
+        .menu {
+            width: 23px;
+        }
+
+        .lupa {
+            font-size: 22px;
+            color: white;
+        }
+    }
+
+    .secciones {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(10, 10, 10, 0.7);
+        position: absolute;
+        top: 60px;
+        left: 110px;
+        width: 40%;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        
+        a {
+            display: block;
+            text-decoration: none;
+            color: $color_principal;
+            font-weight: 250;
+            padding: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+    }
+
+    /* Estilo cuando el menú está activo */
+    .secciones.active {
+        display: flex;
+    }
+
+    .titulo {
+        font-family: $fuente_titulo;
+        margin-top: 10px;
+        margin-left: 20px;
+        
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: $color_titulo;
+            text-shadow: 2px 2px 4px #ffffff, -2px -2px 5px rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+/* Tablets (>= 576px) */
+@media (min-width: 576px) {
+    header {
+
+        .secciones{
+            width: 30%;
+            left: 150px;
+        }
+        .perfil {
+            gap: 20px;
+            
+            .menu {
+                width: 35px;
+            }
+
+            .lupa {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+/* Tablets y pantallas medianas (>= 768px) */
+@media (min-width: 768px) {
+    header {
+
+        .desplegable {
+            margin-left: -230px;
+        }
+
+        .titulo {
+            font-size: 35px;
+        }
+
+        .perfil {
+            .user {
+                width: 60px;
+                height: 60px;
+            }
+            .menu {
+                width: 35px;
+            }
+            .lupa {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+/* Escritorios pequeños (>= 992px) */
+@media (min-width: 992px) {
+    header {
+        .secciones {
+            display: flex;
+            gap: 20px;
+            font-size: 16px;
+            color: $color_principal;
+            margin-top: 20px;
+            position: static;
+            flex-direction: row;
+            background-color: transparent;
+            width: auto;
+            padding: 0;
+        }
+
+        .desplegable {
+            display: none;
+        }
+
+        .perfil {
+            gap: 25px;
+            
+            .user {
+                width: 50px;
+                height: 50px;
+            }
+            .menu {
+                width: 20px;
+            }
+            .lupa {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+/* Escritorios grandes (>= 1200px) */
+@media (min-width: 1200px) {
+    header {
+        .perfil {
+            gap: 25px;
+            
+            .user {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .secciones {
+            gap: 40px;
+        }
+    }
+}
+
+/* Pantallas extra grandes (>= 1400px) */
+@media (min-width: 1400px) {
+    header {
+        .perfil {
+            margin-right: 30px;
+            gap: 25px;
+            
+            .user {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .secciones {
+            gap: 70px;
+        }
+    }
+}

@@ -1,0 +1,325 @@
+body{
+    // max-width: 1300px;
+    margin: auto;
+}
+
+//BANNER
+.banner{
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+     img{
+         filter: grayscale(20%) contrast(120%) brightness(70%);
+    }
+    
+
+    .logo_pelicula{
+        width: 70%;
+        top: 20%;
+        left: 15%;
+        position: absolute;
+    }
+
+    .detalles_serie{
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "boton_serie"
+        "botones_serie"
+        "descripcion_serie"
+        ;
+
+        .boton_serie{
+            grid-area: boton_serie;
+            margin: auto;
+
+            .verAhora {
+                display: flex;
+                align-items: center;
+                // top: 485px;
+                width: 140px;
+                height: 33px;
+                border-radius: 50px;
+                background-color: grey;
+                font-family: $fuente_principal;
+                font-size: 13px;
+                font-weight: bold;
+                color: white;
+                gap: 5px;
+                box-shadow: 0 5px 5px 0 rgb(39, 39, 39);
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                border: none;
+                cursor: pointer;
+            }    
+
+        }
+
+        .botones_serie{
+            grid-area: botones_serie;
+            // width: 70%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin: auto;
+        }
+
+        .descripcion_serie{
+            grid-area: descripcion_serie;
+            display: none;
+        }
+        
+        i {
+            margin-left: 23px; // Reducido el margen izquierdo
+            font-size: 30px; // Reducido el tamaño del ícono
+            color: white;
+        }
+
+    }
+
+    .botones {
+        position: absolute;
+        top: 80%; // Ajustado para alinear con el botón "Ver ahora"
+        left: 30%; // Ajustado para colocar los íconos al lado del botón
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    
+        i {
+            font-size: 20px; // Reducido el tamaño de los íconos
+            color: white;
+            cursor: pointer;
+
+           
+        }
+    }    
+
+}
+
+
+//CAPITULOS
+.capitulos{
+    width: 95%;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.capitulos_grandes{
+    display: none;
+}
+
+.temporadas{
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    background-color: $color_secundario;
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 5%;
+    
+    .temporadas_serie{
+        font-family: $fuente_principal;
+        background-color: $color_detalles;
+        border: none;
+        width: 80%;
+        color: white;
+        padding: 1%;
+        text-align: center;
+        border-radius: 10px;    
+    }
+
+}
+
+//CAPITULOS PEQUEÑOS
+
+.capitulo_pequeño{
+    background-color: $color_secundario;
+    margin-bottom: 5%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.detalles_capitulo{
+    width: 80%;
+    background-color: $color_detalles;
+    margin: auto;
+    padding: 2%;
+    border-radius: 20px;
+
+    img{
+        border-radius: 20px;
+    }
+
+}
+
+//CAPITULOS GRANDES
+.capitulo_grande{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+
+    .caja_imagen{
+
+        .imagen_serie{
+            border-radius: 15px;
+        }
+
+        .imagen_serie:hover{
+            filter: blur(1px);
+        }
+
+    }
+
+    .titulo{
+        font-weight: 700;
+        font-size: 120%;
+        margin-bottom: 2%;
+    }
+    
+}
+
+//RESPONSIVE
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+    .banner{
+    
+        .logo_pelicula{
+            width: 40%;
+            top: 35%;
+            left: 5%;
+        }
+
+        .detalles_serie{
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: 
+            "boton_serie botones_serie"
+            "descripcion_serie descripcion_serie"
+            ;
+            align-items: center;
+            top: 60%;
+
+            .boton_serie{
+                margin: 0;
+
+                .verAhora{
+                    width: 160px;
+                    height: 39px;
+                    font-size: 17px;
+                }
+
+            }
+
+            .botones_serie{
+                width: 50%;
+                margin: 0;
+            }
+
+            .descripcion_serie{
+                display: block;
+                margin-top: 3%;
+                margin-right: 10%;
+                font-size: 90%;
+            }
+
+        }
+    
+    }
+
+    .temporadas{
+        width: 60%;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .banner{
+    
+        .logo_pelicula{
+            width: 30%;
+            top: 45%;
+            left: 5%;
+        }
+
+        .detalles_serie{
+            margin-top: 2%;
+            grid-template-columns: 1fr 5fr;
+
+            .botones_serie{
+                width: 40%;
+            }
+
+            .descripcion_serie{
+                font-size: 110%;
+            }
+
+        }
+    
+    }
+
+    .temporadas{
+        width: 40%;
+        margin: 0;
+
+    }
+
+    .capitulos_pequeños{
+        display: none;
+    }
+
+    .capitulos_grandes{
+        display: block;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .banner{
+    
+        .logo_pelicula{
+            width: 30%;
+            top: 50%;
+            left: 5%;
+        }
+
+        .detalles_serie{
+            margin-top: 5%;
+            grid-template-columns: 1fr 7fr;
+
+            .botones_serie{
+                width: 30%;
+            }
+
+            .descripcion_serie{
+                margin-top: 1%;
+                margin-right: 25%;
+                font-size: 130%;
+            }
+
+        }
+    
+    }
+
+    .temporadas{
+        width: 35%;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    body{
+        max-width: 1600px;
+        margin: auto !important;
+    }
+}

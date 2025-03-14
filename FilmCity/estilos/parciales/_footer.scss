@@ -1,0 +1,123 @@
+footer{
+    color: $color_principal;
+    text-align: center;
+        .redes{
+            margin:  auto;
+            margin-top: 110px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 25px;
+        }
+        .enlaces{
+            padding: 30px;
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: left;
+            font-weight: 200;
+
+            a{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-decoration: none;
+                display: block;
+                color: $color_principal;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+
+        .titulo {
+            font-family: $fuente_titulo;
+            
+            
+            margin-left: 20px;
+            
+            a {
+                text-decoration: none;
+                font-size: 30px;
+                color: $color_titulo;
+                text-shadow: 2px 2px 4px #ffffff, -2px -2px 5px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .copy p{
+            font-size: 10px;
+            font-weight: 200;
+        }
+}
+
+.copy{
+    color: $color_principal;
+    text-align: center;
+    margin-top: 15px;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    footer{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+        hr{
+            display: none;
+        }
+        .enlaces{
+            margin-left: 100px;
+            margin-top: 15px;
+            font-size: 20px;
+            gap: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .titulo{
+            margin-top: 20px;
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+    footer{
+        width: 95%;
+
+        .enlaces{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 13px;
+
+        }
+
+        .columna{
+            a{
+                padding: 10px;
+            }
+        }
+
+        .titulo{
+            margin-top: -50px;
+        }
+
+    }
+
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    footer{
+        .titulo{
+            margin-top: 1px;
+            font-size: 35px;
+        }
+    }
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {  }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles Película</title>
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <script src="./JS/detalles_pelicula.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="titulo"><a href="home.html">FILMCITY</a></div>
+      <i class="desplegable bi bi-list"></i>
+      <div class="secciones" id="menu-movil">
+        <a href="home.html">Inicio</a>
+        <a href="peliculas.html"><b>Peliculas</b></a>
+        <a href="series.html">Series</a>
+        <a href="#">Documentales</a>
+      </div>
+      <div class="perfil">
+        <a href="#"><i class="lupa bi bi-search"></i></a>
+        <a href="#"
+          ><img
+            class="menu"
+            src="multimedia/imagenes/logotipoMenu.png"
+            alt="" /></a
+        ><a href=""
+          ><img class="user" src="multimedia/imagenes/fotoPerfil.jpg" alt=""
+        /></a>
+      </div>
+    </header>
+    <!---content DETALLES DE PELICULAS-->
+    <div class="content">
+      <div class="filmcity"><h3>FILMCITY</h3></div>
+      <div class="titulo-pelicula">
+        <img src="multimedia/imagenes/señor-anillos.jpg" alt="" />
+      </div>
+      <div class="descripcion">
+        Un hobbit de la Comarca y ocho compañeros emprenden <br />
+        un viaje para destruir el poderoso Anillo Único y salvar la <br />
+        Tierra Media del Señor Oscuro Sauron.
+      </div>
+      <div class="trailerDetalles">
+        <video src="multimedia/video/demo.mp4" autoplay loop muted></video>
+      </div>
+      <div class="masDetalles">
+        <p>IMBd 8,9</p>
+        <p>2h 51min</p>
+        <p></p>
+        <ul>
+          Fantasía
+          <li>Acción</li>
+          <li>Onírica</li>
+        </ul>
+      </div>
+      <a href="reproductor_peliculas.html" class="verAhora">
+        <i class="bi bi-play-fill bg-secondary"></i> Ver ahora
+      </a>
+      <div class="botones">
+        <i class="bi bi-plus-circle mas"></i>
+        <div class="circulo">
+          <i class="bi bi-hand-thumbs-up rounded-circle"></i>
+        </div>
+        <div class="circulo">
+          <i class="bi bi-hand-thumbs-down rounded-circle"></i>
+        </div>
+        <div class="circulo"><i class="bi bi-download"></i></div>
+        <div class="circulo"><i class="bi bi-share"></i></div>
+      </div>
+    </div>
+
+    <div class="detalle_pelicula">
+      <h3>Detalles</h3>
+
+      <div id="sinopsis"></div>
+      <div class="reparto-audio">
+        <div id="reparto"></div>
+        <div id="audio"></div>
+      </div>
+    </div>
+
+    <div class="relacionado_pelicula">
+      <h3>Relacionado</h3>
+      <h4>Recomendados para ti</h4>
+      <div id="peliculas"></div>
+    </div>
+
+    <footer>
+      <div class="redes">
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-twitter-x"></i>
+        <i class="bi bi-tiktok"></i>
+        <i class="bi bi-youtube"></i>
+      </div>
+      <div class="enlaces">
+        <hr />
+        <div class="columna">
+          <a href="#">Preguntas frecuentes</a>
+          <a href="#">Inversores</a>
+          <a href="#">Formas de ver</a>
+          <a href="#">Avisos legales</a>
+        </div>
+        <hr />
+        <div class="columna">
+          <a href="#">Centro de ayuda</a>
+          <a href="#">Empleo</a>
+          <a href="#">Terminos de uso</a>
+        </div>
+        <hr />
+        <div class="columna">
+          <a href="#">Cuenta</a>
+          <a href="#">Solo en FilmCity</a>
+          <a href="#">Garantía legal</a>
+        </div>
+        <hr />
+        <div class="columna">
+          <a href="#">Informacion corporativa</a>
+          <a href="#">Zona de prensa</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Anuncios</a>
+        </div>
+      </div>
+      <div class="titulo">
+        <a href="#">FILMCITY</a>
+      </div>
+
+      <div class="copy">
+        <p>
+          &copy; 2025 FILMCITY S.A. Todos los derechos reservados. <br />
+          Diseñado y maquetado por el equipo de FilmCity.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
